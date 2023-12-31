@@ -313,11 +313,106 @@ body {
     left: 25%;
     top: 50%;
 }
+
 #firework2 {
     left: 50%;
     top: 75%;
 }
+
 #firework3 {
     left: 88%;
     top: 15%;
 }
+
+
+
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+
+    /* Adjust font sizes for smaller screens */
+    .msg {
+        font-size: 40px;
+    }
+
+    .new {
+        position: absolute;
+        right: -100px;
+        animation: new_animation 5s ease-in-out 1.5s forwards;
+    }
+
+    @keyframes new_animation {
+        0% {
+            right: -100px;
+        }
+
+        40% {
+            right: 15px;
+        }
+
+        90% {
+            right: 55px;
+        }
+
+        100% {
+            right: 140px;
+            color: purple;
+        }
+    }
+
+    .ballon {
+        width: 100px;
+        height: 125px;
+        border-radius: 50%;
+        background-color: red;
+        position: absolute;
+        top: 50%;
+        right: -100%;
+        margin-top: -285px;
+        animation: ballon_animation 5s ease-in-out 1.5s forwards;
+
+    }
+
+    @keyframes ballon_animation {
+        0% {
+            right: -100px;
+        }
+
+        40% {
+            right: 15px;
+        }
+
+        90% {
+            right: 55px;
+            top: 50%;
+        }
+
+        100% {
+            right: 140px;
+            top: -200%;
+        }
+    }
+
+    .year>span {
+        font-size: 80px;
+    }
+
+    /* Adjust positioning for smaller screens */
+    .msg {
+        top: 55%;
+    }
+
+    .year {
+        top: 250px;
+    }
+
+    .firework {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Rest of your CSS styles remain the same */
+/* ... */
